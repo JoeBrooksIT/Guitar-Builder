@@ -29,7 +29,7 @@ namespace Choose_Your_Class
             Color = color;
         }
         
-        public void restring()
+        public void restringGuitar()
         {
             StringLife = 100;
         }
