@@ -7,7 +7,7 @@ namespace Choose_Your_Class
         // ***GUITAR BUILDER***
 
         // what type of guitar do you want to build?
-        // 1. left or right handed
+        // 1. Left Or RightHanded
         // 2. acoustic or electric
         // 3. Guitar or Bass
         // 4. number of strings 
@@ -26,7 +26,16 @@ namespace Choose_Your_Class
 
         static void Main(string[] args)
         {
-            
+            Console.WriteLine("Welcome to GUITAR BUILDER!");
+            Console.WriteLine();
+            Console.WriteLine("What type of Guitar/Bass do you want to build?");
+            Console.WriteLine();
+            Console.WriteLine("Please follow step 1, Left or Right handed?");
+            Console.ReadLine();
+            //if (guitarType = LeftOrRightHanded)
+                {
+
+                }
         }
     }
 }
