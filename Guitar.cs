@@ -32,10 +32,12 @@ namespace Choose_Your_Class
         public void restringGuitar()
         {
             StringLife = 100;
+            Console.WriteLine("You just restrung your guitar");
         }
         public void tuneGuitar()
         {
             IsTuned = true;
+            Console.WriteLine("You just tuned your guitar");
         }
         public void playGuitar()
         {

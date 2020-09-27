@@ -88,16 +88,22 @@ namespace Choose_Your_Class
 
                 switch (userChoice)
                 {
-                    case "1":
-                        tuneGuitar();
+                    case "tune":
+                        newGuitar.tuneGuitar();
+                        Console.WriteLine("Press enter to return to the main menu");
+                        Console.ReadLine();
                         break;
-                    case "2":
-                        playGuitar();
+                    case "play":
+                        newGuitar.playGuitar();
+                        Console.WriteLine("Press enter to return to the main menu");
+                        Console.ReadLine();
                         break;
-                    case "3":
-                        Restring();
+                    case "restring":
+                        newGuitar.restringGuitar();
+                        Console.WriteLine("Press enter to return to the main menu");
+                        Console.ReadLine();
                         break;
-                    case "4":
+                    case "exit":
                         playGuitar = false;
                         Console.WriteLine("EXIT");
                         break;
