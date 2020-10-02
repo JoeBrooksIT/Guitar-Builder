@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Dynamic;
 using System.Text;
+using System.Transactions;
 
 namespace Choose_Your_Class
 {
@@ -27,8 +28,49 @@ namespace Choose_Your_Class
             IsGuitar = isGuitar;
             Strings = strings;
             Color = color;
+            
         }
-        
+        public void currentSpecs()
+        {
+            Console.WriteLine("These are you current specs" + "");
+            if (IsRightHanded)
+            {
+                Console.WriteLine("Your guitar is right handed");
+            }
+            else
+            {
+                Console.WriteLine("Your guitar is left handed");
+            }
+            if (IsElectric)
+            {
+                Console.WriteLine("Your guitar is Electric");
+            }
+            else
+            {
+                Console.WriteLine("Your guitar is acoustic");
+            }
+            if (IsGuitar)
+            {
+                Console.WriteLine("You selected guitar");
+            }
+            else
+            {
+                Console.WriteLine("You selected bass");
+            }
+            if (IsTuned)
+            {
+                Console.WriteLine("Your guitar is tuned");
+            }
+            else
+            {
+                Console.WriteLine("Your guitar is out of tune");
+
+            }
+            Console.WriteLine("Number of strings: " + Strings);
+            Console.WriteLine("The color is: " + Color);
+            Console.WriteLine("Please enter to return to main menu");
+            Console.ReadLine();
+        }
         public void restringGuitar()
         {
             StringLife = 100;
@@ -56,6 +98,7 @@ namespace Choose_Your_Class
                 StringLife -= 5;
                 IsTuned = false;
             }
+            
         }
 
         // what type of guitar do you want to build?

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO.MemoryMappedFiles;
 using System.Security.Cryptography.X509Certificates;
 
 namespace Choose_Your_Class
@@ -13,7 +14,8 @@ namespace Choose_Your_Class
         // 3. Guitar or Bass (bool)
         // 4. number of strings 
         // 5. color
-           
+        // 6. fixed bridge or tremolo
+        // 7. change pickup
         
 
         
@@ -42,9 +44,9 @@ namespace Choose_Your_Class
                 newGuitar.IsRightHanded = true;
             }
             Console.WriteLine("Do you want an Acoustic or Electric? Press 1 for Acoustic, press any key for Electric");
-            string isElecticInput = Console.ReadLine();
+            string isElectricInput = Console.ReadLine();
 
-            if (isElecticInput == "1") 
+            if (isElectricInput == "1") 
             {
                 Console.WriteLine("You selected Acoustic");
                 newGuitar.IsElectric = false;
@@ -81,6 +83,7 @@ namespace Choose_Your_Class
                 Console.WriteLine("Do you want to tune your guitar?");
                 Console.WriteLine("Do you want to play your guitar?");
                 Console.WriteLine("Do you want to restring your guitar?");
+                Console.WriteLine("Do you want to view current specs?");
                 Console.WriteLine("Exit");
                 
                 
@@ -103,12 +106,18 @@ namespace Choose_Your_Class
                         Console.WriteLine("Press enter to return to the main menu");
                         Console.ReadLine();
                         break;
+                    case "current specs":
+                        newGuitar.currentSpecs();
+                        break;
                     case "exit":
                         playGuitar = false;
                         Console.WriteLine("EXIT");
                         break;
                     default:
                         break;
+
+
+
                 }
             }
 
